@@ -1,0 +1,36 @@
+﻿<Window x:Class="CatchTheTarget.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatchTheTarget"
+        mc:Ignorable="d"
+        Title="CatchTheTarget" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="606*"/>
+            <ColumnDefinition Width="169*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="GameScreen" Margin="0,0,0,0.5" Stretch="Fill" HorizontalAlignment="Left" />
+        <!-- <RadioButton x:Name="low_minDistance" Content="Close" Grid.Column="1" HorizontalAlignment="Left" Margin="24,32,0,0" VerticalAlignment="Top" GroupName="minDistance" Checked="low_minDistance_Checked" d:IsHidden="True"/>
+        <RadioButton x:Name="normal_minDistance" Content="Normal" Grid.Column="1" HorizontalAlignment="Left" Margin="24,62,0,0" VerticalAlignment="Top" GroupName="minDistance" Checked="normal_minDistance_Checked" d:IsHidden="True"/>
+        <RadioButton x:Name="High_minDistance" Content="Far" Grid.Column="1" HorizontalAlignment="Left" Margin="24,92,0,0" VerticalAlignment="Top" GroupName="minDistance" Checked="High_minDistance_Checked" d:IsHidden="True"/>  -->
+        <TextBlock x:Name="minDistance" Grid.Column="1" HorizontalAlignment="Left" Margin="10,2,0,0" TextWrapping="Wrap" Text="To the Kinect" VerticalAlignment="Top" FontWeight="Bold"/>
+        <!--<RadioButton x:Name="Low_maxDistance" Content="Small" Grid.Column="1" HorizontalAlignment="Left" Margin="24,176,0,0" VerticalAlignment="Top" GroupName="maxDistance" Checked="Low_maxDistance_Checked" d:IsHidden="True"/>
+        <RadioButton x:Name="normal_maxDistance" Content="Normal" Grid.Column="1" HorizontalAlignment="Left" Margin="24,206,0,0" VerticalAlignment="Top" GroupName="maxDistance" Checked="normal_maxDistance_Checked" d:IsHidden="True"/>
+        <RadioButton x:Name="high_maxDistance" Content="Big" Grid.Column="1" HorizontalAlignment="Left" Margin="24,236,0,0" VerticalAlignment="Top" GroupName="maxDistance" Checked="high_maxDistance_Checked" d:IsHidden="True"/> -->
+        <TextBlock x:Name="maxDistance" Grid.Column="1" HorizontalAlignment="Left" Margin="10,76,0,0" TextWrapping="Wrap" Text="Play area" VerticalAlignment="Top" FontWeight="Bold"/>
+        <RadioButton x:Name="Static" Content="Easy" Grid.Column="1" HorizontalAlignment="Left" Margin="10,190,0,0" VerticalAlignment="Top" GroupName="GameMode" Checked="Static_Checked"/>
+        <RadioButton x:Name="MoveSlow" Content="Normal" Grid.Column="1" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" GroupName="GameMode" Checked="MoveSlow_Checked"/>
+        <RadioButton x:Name="MoveFast" Content="Difficult" Grid.Column="1" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" GroupName="GameMode" Checked="MoveFast_Checked"/>
+        <TextBlock x:Name="GameMode" Grid.Column="1" HorizontalAlignment="Left" Margin="10,162,0,0" TextWrapping="Wrap" Text="Game Mode" VerticalAlignment="Top" FontWeight="Bold" TextAlignment="Center"/>
+        <Slider x:Name="MinDistance_slider" Grid.Column="1" HorizontalAlignment="Left" Margin="52,30,0,0" VerticalAlignment="Top" Maximum="900" Minimum="500" Value="500" ValueChanged="MinDistance_slider_ValueChanged" Width="91"/>
+        <Slider x:Name="MaxDistance_slider" Grid.Column="1" HorizontalAlignment="Left" Margin="52,102,0,0" VerticalAlignment="Top" Maximum="2000" Minimum="1200" Value="1200" ValueChanged="MaxDistance_slider_ValueChanged" Width="86"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,30,0,0" TextWrapping="Wrap" Text="close" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="148,30,-6,0" TextWrapping="Wrap" Text="far" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,102,0,0" TextWrapping="Wrap" Text="small" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="143,102,-6,0" TextWrapping="Wrap" Text="big" VerticalAlignment="Top" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
