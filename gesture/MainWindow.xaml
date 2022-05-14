@@ -1,0 +1,26 @@
+﻿<Window x:Class="NotCorporateSlave.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotCorporateSlave"
+        mc:Ignorable="d"
+        Title="Not Corporate Slave" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="121*"/>
+            <ColumnDefinition Width="38*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="GameScreen" Grid.Column="0" HorizontalAlignment="Center" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="recognitionResult" HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Width="386" Height="29"/>
+        <Image x:Name="ColorScreen" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="170"/>
+        <TextBlock x:Name="Document_spawning_rate" Grid.Column="1" HorizontalAlignment="Left" Margin="10,192,0,0" TextWrapping="Wrap" Text="Document spawning rate" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Slider x:Name="doc_rate" Grid.Column="1" HorizontalAlignment="Left" Margin="34,213,0,0" VerticalAlignment="Top" Maximum="0.7" Minimum="0.1" Value="0.4" ValueChanged="doc_rate_ValueChanged" Width="103"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="low" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,213,0,0" TextWrapping="Wrap" Text="high" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock x:Name="No_trails" Grid.Column="1" HorizontalAlignment="Left" Margin="10,269,0,0" TextWrapping="Wrap" Text="Number of trails" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Slider x:Name="Num_trail" Grid.Column="1" HorizontalAlignment="Left" Margin="34,290,0,0" VerticalAlignment="Top" Maximum="8" Minimum="3" Value="4" SmallChange="1" ValueChanged="Num_trail_ValueChanged" Width="103"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,290,0,0" TextWrapping="Wrap" Text="low" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="142,290,0,0" TextWrapping="Wrap" Text="high" VerticalAlignment="Top" Grid.Column="1"/>
+    </Grid>
+</Window>
